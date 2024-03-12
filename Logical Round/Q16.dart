@@ -3,33 +3,37 @@ import 'dart:io';
 
 void main()
 {
-  stdout.write("Enter the value :");
+  stdout.write("Enter the Array of size :");
   var n = int.parse(stdin.readLineSync()!);
 
+  var i;
+  List<int> element=[];
+
+  for(i=0; i<n; i++)
+  {
+      stdout.write("Enter the Array element :${"[$i]"}");
+      element.add(int.parse(stdin.readLineSync()!));
+  }
+
+
   print("Enter R for right rorate");
-  print("Enter l for right rorate");
+  print("Enter l for left rorate");
   
   stdout.write("enter the rotate value :");
   String a = stdin.readLineSync()!;
-  int N = int.parse(a);
 
-  if(N)
+  if(a==1)
   {
-    List<int> element=[];
-
-    var i;
-
-    for(i=0; i<n; i++)
-    {
-      stdout.write("Enter the Array element :${"[$i]"}");
-      element.add(int.parse(stdin.readLineSync()!));
-    }
-
-    for(i=n-1; i>=0; i--)
+    for(i=n-1; i >=0; i--)
     {
       print(element[i]);
     }
   }
-  
+  else{
+    for(i=n-1; i >=0; i--)
+    {
+      print(element[i]);
+    }
+  }
 
 }
