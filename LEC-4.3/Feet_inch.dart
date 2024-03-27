@@ -17,14 +17,17 @@ class Distance
 
     void Getter()
     {
-      if(inch>=12)
-      {
-        feet++;
-        inch = inch - 12;
-      }
-      print("Feet is : $feet");
-      print("Inch is : $inch");
-    }
+        for(int i=1; i<=inch; i++)
+        {
+            if(inch>=12)
+            {
+              feet++;
+              inch = inch - 12;
+            }
+        }
+            print("Feet is : $feet");
+            print("Inch is : $inch");
+        }
 }
 void main()
 {
